@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="div1" style="background-image: url(/assets/birthday-2.jpg); height: 100%; text-align: center;">
+    <br><br><br>
+    <div style="display: flex;">
+        <mat-card class="card1" style="flex: 1;">
+            <mat-card-content class="content1">
+                <b>Select birthday Person age group</b>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <br><br><br>
+
+    <div class="div2" >
+        <mat-card class="card2">
+            <img mat-card-image src="/assets/baby.jpg">
+            <button mat-button (click)="home11()" style="background-color: blueviolet; color: white;" routerLink="/home2"> Age between 1 to 8</button>
+        </mat-card>
+        <mat-card class="card3">
+            <img mat-card-image src="/assets/children.webp" style="height: 140px;">
+            <button mat-button (click)="home12()" style="background-color: blueviolet; color: white;" routerLink="/home2"> Age between 9 to 20</button>
+        </mat-card>
+        <mat-card class="card4">
+            <img mat-card-image src="/assets/youngadults.jpg" style="height: 140px;">
+            <button mat-button (click)="home13()" style="background-color: blueviolet; color: white;" routerLink="/home2"> Age between 21 to 35</button>
+        </mat-card>
+        <mat-card class="card5">
+            <img mat-card-image src="/assets/adults.webp" style="height: 140px;">
+            <button mat-button (click)="home14()" style="background-color: blueviolet; color: white;" routerLink="/home2"> Age greater than 35</button>
+        </mat-card>
+    </div>
+
+</div>

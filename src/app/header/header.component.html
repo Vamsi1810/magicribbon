@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Magic Ribbon</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"routerLink='/home' routerLinkActive='active'>
+        <span class="fa fa-home fa-lg"></span> Home
+    </button>
+    <button mat-button class="example-icon" aria-label="Example icon-button with share icon" routerLink='/orders' routerLinkActive='active'>
+        <span class="fa fa-shopping-cart fa-lg">  </span>Your Orders
+    </button>
+    <button mat-button class="example-icon">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>{{email}}
+    </button>
+    <button mat-button routerLink = "/welcomepage">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>Logout
+    </button>
+</mat-toolbar>

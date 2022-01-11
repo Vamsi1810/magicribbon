@@ -1,0 +1,13 @@
+.example-card {
+    width: 300px;
+    margin-left: 450px;
+    
+    background-color: antiquewhite;
+  }
+mat-form-field{
+    margin-left: 50px;
+    margin-top: 10px;
+  } 
+.bgimg{
+     background-image: url("/assets/loginbackground.jpg");
+  }

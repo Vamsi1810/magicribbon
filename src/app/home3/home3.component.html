@@ -1,0 +1,108 @@
+<app-header></app-header>
+<div style="background-image: url(/assets/birthday-4.jpg); height: 240%;flex: auto;">
+    <br>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-toolbar color="primary" style="margin-right: -5px; margin-left: -10%;"><span style="margin-left: 50px; font-size: 30px;"><i>Fill the details</i></span></mat-toolbar>
+        </mat-card-header>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label> Name</mat-label>
+            <input matInput placeholder="Name" required #name>
+            <mat-hint>Enter your Name</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Gender</mat-label>
+            <input matInput [(ngModel)]="gen" [disabled]="true">
+            <mat-hint>This is meant for Decoration Purpose</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Age Group</mat-label>
+            <input matInput [(ngModel)]="age_grp" [disabled]="true">
+            <mat-hint>This describes your pre-selected option</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Exact age</mat-label>
+            <input matInput placeholder="age" type="number" required #age> 
+            <mat-hint>Enter your exact age</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Decoration Type</mat-label>
+              <input matInput [(ngModel)]="decorat_type" [disabled]="true">
+              <mat-hint>This describes your pre-selected option</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Number of attendees</mat-label>
+              <input matInput placeholder="Number of attendees" type="number" required #noofattendees>
+              <mat-hint>Enter the Expected number of attendees</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Preferred Cake Type</mat-label>
+              <input matInput [(ngModel)]="cake_type" [disabled]="true">
+              <mat-hint>Your Prefered cake type</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Cake Quantity</mat-label>
+              <input matInput placeholder="cake quantity" type="number" required #cakequantity>
+              <mat-hint>Your Prefered cake Quantity</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Any special arrangements Required??</mat-label>
+              <input matInput placeholder="special arrangements" type="text" required #splarrangements>
+              <mat-hint>Do you expect anything special from our side</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Date of arrangements</mat-label>
+              <input matInput placeholder="date" type="date" required #date>
+              <mat-hint>Enter date of event</mat-hint>
+            </mat-form-field>
+          </p>
+          <br><br>
+          <mat-card-header>
+            <mat-toolbar color="primary" style="margin-right: -5px; margin-left: -10%;"><span style="margin-left: 0px; font-size: 30px;"><i>Fill your contact details</i></span></mat-toolbar>
+          </mat-card-header>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Phone number</mat-label>
+              <input matInput placeholder="contact number" type="number" required #phone>
+              <mat-hint>Enter your phone number</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="email" type="email" required #email>
+              <mat-hint>Enter your email address</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Enter your address</mat-label>
+              <input matInput placeholder="Address" type="text" required #address>
+              <mat-hint>Enter your address</mat-hint>
+            </mat-form-field>
+          </p>
+          
+        <mat-card-actions>
+          <button mat-raised-button (click)="onSubmit(name.value,age.value,noofattendees.value,cakequantity.value,splarrangements.value,date.value,phone.value,email.value,address.value)" color="primary" style="width: 100px;margin-left: 50px;" type="submit" routerLink="/home">Submit</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

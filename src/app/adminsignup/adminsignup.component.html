@@ -1,0 +1,59 @@
+<div class="bgimg" style="background-image: url({{bgimg1}});height: 130%;">
+  <br><br><br>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-toolbar color="primary" style="margin-right: -5px; margin-left: -10%;"><span style="margin-left: 50px; font-size: 30px;"><i>Signup with us</i></span></mat-toolbar>
+        </mat-card-header>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Unique Id</mat-label>
+            <input matInput placeholder="Id" [(ngModel)]="id" required>
+            <mat-hint>Enter the Comapany Unique Id</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label> Name</mat-label>
+            <input matInput placeholder="Name" [(ngModel)]="name" required>
+            <mat-hint>Enter your Name</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Mobile number</mat-label>
+            <input matInput placeholder="Mobile number" type="number" [(ngModel)]="mobile">
+            <mat-hint>Enter your Mobile Number</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="E-mail" type="email" [(ngModel)]="email">
+              <mat-hint>Enter your Email</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" type="password" [(ngModel)]="password">
+              <mat-hint>Enter your password</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput placeholder="Confirm Password" type="password" [(ngModel)]="confpassword">
+              <mat-hint>Confirm your password</mat-hint>
+            </mat-form-field>
+          </p>
+        <mat-card-actions>
+          <button mat-raised-button (click)="saveAdminDetails()" color="primary" style="width: 100px;margin-left: 50px;">Signup</button>
+        </mat-card-actions>
+    
+      <mat-card-content>
+        <p>
+          Already a member ? <a routerLink="/adminlogin">Login</a>
+        </p>
+      </mat-card-content>
+      </mat-card>
+</div>

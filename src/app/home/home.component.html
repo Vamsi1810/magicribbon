@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div  style="background-image: url(/assets/birthday-1.jpg); height: 100%; flex: auto;">
+  <br><br><br>
+  <mat-card class="card1">
+       <span >Select birthday person Gender</span> 
+  </mat-card>
+  <br><br><br>
+  <mat-card class="card2">
+    <mat-form-field appearance="fill">
+      <mat-label required>Select Gender</mat-label>
+      <mat-select #option>
+        <mat-option value="Boy">Boy</mat-option>
+        <mat-option value="Girl">Girl</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+  <br><br><br>
+  <button mat-raised-button (click)="button1(option.value)" color="primary" style="width: 100px;margin-left: 75px;" routerLink="/home1">Next</button>
+</div>

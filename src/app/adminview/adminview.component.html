@@ -1,0 +1,50 @@
+<div style="background-color: mediumturquoise; height: 100%;">
+
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Magic Ribbon</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="example-icon" aria-label="Example icon-button with share icon" routerLink='/orders' routerLinkActive='active'>
+        <span class="fa fa-shopping-cart fa-lg">  </span>Completed Orders
+    </button>
+    <button mat-button class="example-icon">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>{{email}}
+    </button>
+    <button mat-button routerLink = "/welcomepage">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>Logout
+    </button>
+
+</mat-toolbar>
+<br><br>
+<div>
+    <div *ngFor="let detail of details" style="background-color: mediumturquoise;">
+            <mat-expansion-panel hideToggle style=" margin-left: 100px; margin-right: 100px;">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Name : {{detail.name}} <br>
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Click to see full details
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                Address: {{detail.address}}<br>
+                Age: {{detail.age}}<br>
+                Age group: {{detail.age_group}}<br>
+                Cake quantity: {{detail.cake_quantity}}<br>
+                Cake type: {{detail.cake_type}}<br>
+                Date of arrangement: {{detail.dateofarrangement}} <br>
+                Decoration type: {{detail.decoration_type}} <br>
+                E-mail: {{detail.email}} <br>
+                Gender: {{detail.gender}} <br>
+                No of attendees: {{detail.no_of_attendees}} <br>
+                Phone: {{detail.phone}} <br>
+                Special arrangements: {{detail.special_arrangements}} <br><br>
+                <button mat-button style="background-color: blueviolet; color:white;">Completed</button>
+                <button mat-button (click)="delete(detail._id)" style="background-color: blueviolet; color:white;">Delete</button>
+              </mat-expansion-panel> 
+              <br>
+    </div>
+</div>
+</div>

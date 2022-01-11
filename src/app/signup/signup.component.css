@@ -1,0 +1,9 @@
+.example-card {
+    width: 350px;
+    margin-left: 460px;
+    background-color: antiquewhite;
+  }
+mat-form-field{
+    margin-left: 50px;
+    margin-top: 5px;
+}

@@ -1,0 +1,21 @@
+mat-grid-tile{
+    background:lightblue;
+}
+mat-grid-list{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+span{
+    font-size: 20px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card1{
+    background-color: white;
+    max-width: 400px;
+}
+.card2{
+    max-width: 200px;
+    max-height: 50px;
+    margin-left: 50px;
+}
+
