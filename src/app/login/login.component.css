@@ -1,4 +1,4 @@
-.example-card {
+/* .example-card {
     width: 300px;
     margin-left: 450px;
     
@@ -10,4 +10,32 @@ mat-form-field{
   } 
 .bgimg{
      background-image: url("/assets/loginbackground.jpg");
-  }
+  } */
+
+  body{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img{
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    justify-content: space-around;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading{
+    font-size: 2vw;
+    font-family: cursive;
+    margin-top: 10px;
+}
+a{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+.login{
+  border-radius: 15px;
+}

@@ -15,7 +15,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 import { HeaderComponent } from './header/header.component';
 import {MatSelectModule} from '@angular/material/select';
 import { Home2Component } from './home2/home2.component';
@@ -39,7 +38,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    WelcomepageComponent,
     HeaderComponent,
     Home2Component,
     Home1Component,

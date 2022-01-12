@@ -1,4 +1,4 @@
-<body class="bgimg">
+<!-- <body class="bgimg">
   <br><br><br><br>
     <mat-card class="example-card">
       <mat-card-header>
@@ -29,4 +29,34 @@
     </mat-card-content>
     </mat-card>
     
-  </body>
+  </body> -->
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <img src="assets/logo.jpeg" class="img-responsive">
+        <div class="card mx-auto login" style="width: 25rem;">
+            <br>
+        <div class="container">
+            <div class="row">
+                <b><h1 style="text-align: center;" class="heading">Login</h1></b>
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"><i class="fa fa-user" aria-hidden="true"></i> Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"><i class="fa fa-lock" aria-hidden="true"></i> Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password">
+                    </div>
+                    <button type="submit" mat-raised-button class="mb-3" color="primary" (click)="add()">Submit</button>
+                  </form>
+            </div>
+            <div class="row">
+                <h3>Not a member ? Click <a routerLink="/signup">Here</a> to signup</h3>
+                <h3>If you are an admin , Click <a routerLink="/adminlogin">Here</a> to Login</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>

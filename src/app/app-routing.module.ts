@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import {HomeComponent} from './home/home.component';
-import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 import {HeaderComponent} from './header/header.component';
 import { Home2Component } from './home2/home2.component';
 import { Home1Component } from './home1/home1.component';
@@ -27,10 +26,9 @@ const routes: Routes = [
   {path:'adminsignup',component:AdminsignupComponent},
   {path:'adminlogin',component:AdminloginComponent},
   {path:'adminview',component:AdminviewComponent},
-  {path:'welcomepage',component:WelcomepageComponent},
   {path:'customerorders',component:CustomerordersComponent},
   {path:'admincompletedorders',component:AdmincompletedordersComponent},
-  {path:'',component:WelcomepageComponent}
+  {path:'',component:LoginComponent}
 ];
 
 @NgModule({

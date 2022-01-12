@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "SDP"
+  "defaultProject": "SDP",
+  "cli": {
+    "analytics": "710ba222-b49a-4ca0-a89a-b262c8bc17cc"
+  }
 }
