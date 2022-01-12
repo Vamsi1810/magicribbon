@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Birthdayint} from './birthdayint';
+import { Order} from './order';
 import { HttpClient }from '@angular/common/http';
 import { signupSchema } from './signupSchema';
 import { catchError } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { HttpErrorMsgService } from './http-error-msg.service';
   providedIn: 'root'
 })
 export class BirthdayService {
-  cust:Birthdayint[]=[];
+  cust:Order[]=[];
   signupDetails:signupSchema;
   gender;
   age_group;

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div  style="background-image: url(/assets/birthday-1.jpg); height: 100%; flex: auto;">
+<!-- <div  style="background-image: url(/assets/birthday-1.jpg); height: 100%; flex: auto;">
   <br><br><br>
   <mat-card class="card1">
        <span >Select birthday person Gender</span> 
@@ -16,4 +16,59 @@
   </mat-card>
   <br><br><br>
   <button mat-raised-button (click)="button1(option.value)" color="primary" style="width: 100px;margin-left: 75px;" routerLink="/home1">Next</button>
-</div>
+</div> -->
+<body>
+  <br><br><br>
+  <div class="container">
+      <div class="card mx-auto login col-xl-6">
+      <br>
+      <div class="container">
+        <h1 style="text-align: center;" class="heading"><b>Please Fill Out Your requirements</b></h1>
+          <div class="row">
+              <form>
+                  <div class="mb-3">
+                    <label class="form-label"> Type of Occasion </label>
+                    <select class="form-control" name="type" [(ngModel)]="type">
+                      <option value="Birthday">Birthday 🎂</option>
+                      <option value="Marriage">Marraige 💏</option>
+                      <option value="Function">Function 👨‍👨‍👧‍👦</option>
+                      <option value="Private_Party">Private Party 🍹</option>
+                      <option value="others">Others</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Add Your Venue 🏢</label>
+                    <input type="text" class="form-control" name="password" [(ngModel)]="venue" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Expected Number of Attendees 👨‍👨‍👧‍👧</label>
+                    <input type="number" class="form-control" name="password" [(ngModel)]="attendees" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Contact Number 📞</label>
+                    <input type="number" class="form-control" name="password" [(ngModel)]="contact" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Required Foods 🍯 & drinks 🥤& 🍽  </label>
+                    <input type="text" class="form-control" name="password" [(ngModel)]="food" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Any decorations required 🎊 🎉 </label>
+                    <input type="text" class="form-control" name="decorations" [(ngModel)]="decorations" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Event Date 📅 </label>
+                    <input type="date" class="form-control" name="date" [(ngModel)]="date" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label"> Need Any other Service from us ? 🤔 </label>
+                    <input type="text" class="form-control" name="date" [(ngModel)]="others" required>
+                  </div>
+                  <button type="submit" mat-raised-button class="mb-3" color="primary" (click)="submit()">Submit</button>
+                </form>
+          </div>
+      </div>
+      </div>
+      <br><br><br>
+  </div>
+</body>

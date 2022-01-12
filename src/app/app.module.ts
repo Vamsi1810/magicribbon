@@ -18,11 +18,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HeaderComponent } from './header/header.component';
 import {MatSelectModule} from '@angular/material/select';
-import { Home2Component } from './home2/home2.component';
-import { Home1Component } from './home1/home1.component';
-import { Home3Component } from './home3/home3.component';
 import { FormsModule } from '@angular/forms';
-import { Home4Component } from './home4/home4.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BirthdayService } from './birthday.service';
 import { AdminsignupComponent } from './adminsignup/adminsignup.component';
@@ -42,10 +38,6 @@ import { ToastrModule } from 'ngx-toastr';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    Home2Component,
-    Home1Component,
-    Home3Component,
-    Home4Component,
     AdminsignupComponent,
     AdminloginComponent,
     AdminviewComponent,
