@@ -1,9 +1,35 @@
-.example-card {
-    width: 350px;
-    margin-left: 460px;
-    background-color: antiquewhite;
-  }
-mat-form-field{
-    margin-left: 50px;
-    margin-top: 5px;
+body{
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: auto;
+}
+
+img{
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  justify-content: space-around;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 600px){
+.heading{
+    margin-top: 10px;
+}
+}
+.heading{
+/* font-size: 3vw; */
+font-family: cursive;
+margin-top: 10px;
+text-align: center;
+}
+a{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+cursor: pointer;
+}
+.login{
+border-radius: 15px;
+margin:auto
 }

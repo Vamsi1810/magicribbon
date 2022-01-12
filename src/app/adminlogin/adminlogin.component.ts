@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BirthdayService } from '../birthday.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-adminlogin',
@@ -13,7 +14,7 @@ export class AdminloginComponent implements OnInit {
   password;
   public res;
   public confirm=false;
-  constructor(private service: BirthdayService, private router: Router) { }
+  constructor(private service: BirthdayService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -27,8 +28,18 @@ export class AdminloginComponent implements OnInit {
         {
           this.service.emailname=this.email
           console.log(this.res);
-          this.router.navigate(['/adminview']);
+          this.toastr.success('Success', 'Login Verified',{
+            timeOut:2000,
+            progressBar:true,
+            closeButton:true
+          });
+          setTimeout(()=>{this.router.navigate(['/adminview']);},2000);
         }
       });
+      this.toastr.error('Invalid Credentials','Login Failed',{
+        timeOut:2000,
+        progressBar:true,
+        closeButton:true
+      })
   }
 }

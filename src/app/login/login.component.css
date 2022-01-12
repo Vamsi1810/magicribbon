@@ -29,15 +29,14 @@ img{
 }
 @media only screen and (max-width: 600px){
   .heading{
-      font-size: 8vw;
-      font-family: cursive;
       margin-top: 10px;
   }
 }
 .heading{
-  font-size: 3vw;
+  /* font-size: 3vw; */
   font-family: cursive;
   margin-top: 10px;
+  text-align: center;
 }
 a{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,4 +45,7 @@ a{
 .login{
   border-radius: 15px;
   margin:auto
+}
+input{
+  border-color: black;
 }

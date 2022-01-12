@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { signupSchema } from '../signupSchema';
 import { BirthdayService } from '../birthday.service';
 import { Router, RouterLink } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  constructor( private service: BirthdayService, private router:Router) { }
+  constructor( private service: BirthdayService, private router:Router, private toastr: ToastrService) { }
   name;
   mobile;
   email;
@@ -35,11 +36,19 @@ export class SignupComponent implements OnInit {
      console.log(details);
      this.service.postUser(details)
      .subscribe();
-     alert("Your Signup is Successful with us");
-     this.router.navigate(['login']);
+     this.toastr.success('please login', 'Success',{
+      timeOut:2000,
+      progressBar:true,
+      closeButton:true
+    });
+    setTimeout(()=>{this.router.navigate(['login']);},2000);
     }
      if(this.password !== this.confpassword){
-       alert("CHECK YOUR PASSWORD")
+      this.toastr.error('Check Passwords','Registration Failed',{
+        timeOut:2000,
+        progressBar:true,
+        closeButton:true
+      })
      } 
   }
 }

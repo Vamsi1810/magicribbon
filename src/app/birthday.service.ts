@@ -45,7 +45,7 @@ export class BirthdayService {
   getuser(email,password)
   {
     return this.http.get(`http://localhost:4500/signup/getUser/${email}/${password}`)
-    // .pipe(catchError(this.HttpErrorMsg.handleError));
+     .pipe(catchError(this.HttpErrorMsg.handleError));
   }
 
   getadminuser(email,password)

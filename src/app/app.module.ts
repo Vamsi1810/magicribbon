@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,6 +32,8 @@ import { HttpErrorMsgComponent } from './http-error-msg/http-error-msg.component
 import { CustomerordersComponent } from './customerorders/customerorders.component';
 import { AdmincompletedordersComponent } from './admincompletedorders/admincompletedorders.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AdmincompletedordersComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -66,7 +70,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSelectModule,
     FormsModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ToastrModule.forRoot()
   ],
   providers: [BirthdayService],
   bootstrap: [AppComponent]

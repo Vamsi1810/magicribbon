@@ -38,16 +38,16 @@
             <br>
         <div class="container">
           <img src="assets/logo.jpeg" class="img-responsive">
+          <h1 style="text-align: center;" class="heading"><b>Login</b></h1>
             <div class="row">
-                <b><h1 style="text-align: center;" class="heading">Login</h1></b>
                 <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"><i class="fa fa-user" aria-hidden="true"></i> Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email">
+                      <input type="email" class="form-control" name="email" aria-describedby="emailHelp" [(ngModel)]="email">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label"><i class="fa fa-lock" aria-hidden="true"></i> Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password">
+                      <input type="password" class="form-control" name="password" [(ngModel)]="password">
                     </div>
                     <button type="submit" mat-raised-button class="mb-3" color="primary" (click)="add()">Submit</button>
                   </form>

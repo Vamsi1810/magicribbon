@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BirthdayService } from '../birthday.service';
+import { ToastrService } from 'ngx-toastr';
+import { delay } from 'rxjs/operators';
 
 
 @Component({
@@ -14,16 +16,17 @@ export class LoginComponent implements OnInit {
   password;
   // details;
   errMess;
-  res;
+  res=null;
   confirm=false;
-  constructor(private birthday: BirthdayService, private router:Router) { }
+  constructor(private birthday: BirthdayService, private router:Router, private toastr: ToastrService) { }
 
+  flag;
   ngOnInit(): void {
+    this.flag=0;
   }
-
+  
   add()
   {
-    console.log(this.email,this.password);
     this.birthday.getuser(this.email,this.password)
       .subscribe((details) => {
         this.res=details;
@@ -31,8 +34,21 @@ export class LoginComponent implements OnInit {
         {
           this.birthday.emailname=this.email;
           console.log(this.res);
-          this.router.navigate(['/home']);
+          this.toastr.success('Success', 'Login Verified',{
+            timeOut:2000,
+            progressBar:true,
+            closeButton:true
+          });
+          this.flag=1;
+          setTimeout(()=>{this.router.navigate(['/home']);},2000);
         }
+      },(err)=>{
+        console.log(err);
+        this.toastr.error('Invalid Credentials','Login Failed',{
+          timeOut:2000,
+          progressBar:true,
+          closeButton:true
+        });
       });
   }
   

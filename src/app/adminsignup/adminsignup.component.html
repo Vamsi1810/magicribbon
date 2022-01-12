@@ -1,4 +1,4 @@
-<div class="bgimg" style="background-image: url({{bgimg1}});height: 130%;">
+<!-- <div class="bgimg" style="background-image: url({{bgimg1}});height: 130%;">
   <br><br><br>
     <mat-card class="example-card">
         <mat-card-header>
@@ -56,4 +56,52 @@
         </p>
       </mat-card-content>
       </mat-card>
-</div>
+</div> -->
+
+
+<body>
+  <br><br><br>
+  <div class="container">
+      <div class="card mx-auto login col-xl-6">
+          <br>
+      <div class="container">
+        <img src="assets/logo.jpeg" class="img-responsive">
+        <h1 style="text-align: center;" class="heading"><b>Signup</b></h1>
+          <div class="row">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Id</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="id">
+                </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile Number</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="mobile">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"><i class="fa fa-key" aria-hidden="true"></i> Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fa fa-key" aria-hidden="true"></i> Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="confpassword">
+                  </div>
+                  <button type="submit" mat-raised-button class="mb-3" color="primary" (click)="saveAdminDetails()">Submit</button>
+                </form>
+          </div>
+          <div class="row">
+              <h3>Already a member ? Click <a routerLink="/adminlogin">Here</a> to Login</h3>
+          </div>
+      </div>
+      </div>
+      <br><br><br>
+  </div>
+  <br><br>
+</body>
