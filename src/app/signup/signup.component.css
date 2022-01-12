@@ -15,13 +15,12 @@ img{
   margin-right: auto;
 }
 @media only screen and (max-width: 600px){
-.heading{
-    margin-top: 10px;
-}
+  .heading{
+      margin-top: 10px;
+  }
 }
 .heading{
 /* font-size: 3vw; */
-font-family: cursive;
 margin-top: 10px;
 text-align: center;
 }
