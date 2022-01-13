@@ -14,15 +14,19 @@ export class LoginComponent implements OnInit {
 
   email;
   password;
-  // details;
   errMess;
   res=null;
   confirm=false;
   constructor(private birthday: BirthdayService, private router:Router, private toastr: ToastrService) { }
 
-  flag;
+  
   ngOnInit(): void {
-    this.flag=0;
+    console.log(sessionStorage.length)
+    if(sessionStorage.length!=0){
+      console.log(this.birthday.user);
+      this.router.navigate(['/home']);
+    }
+    console.log(this.birthday.user);
   }
   
   add()
@@ -33,13 +37,17 @@ export class LoginComponent implements OnInit {
         if(this.res!=null)
         {
           this.birthday.emailname=this.email;
-          console.log(this.res);
+          // console.log(this.res);
           this.toastr.success('Success', 'Login Verified',{
             timeOut:2000,
             progressBar:true,
             closeButton:true
           });
-          this.flag=1;
+          
+          localStorage.setItem('user',JSON.stringify(this.res));
+          sessionStorage.setItem('user',JSON.stringify(this.res));
+          console.log(JSON.parse(localStorage.getItem('user')));
+          this.birthday.user = JSON.parse(localStorage.getItem('user'));
           setTimeout(()=>{this.router.navigate(['/home']);},2000);
         }
       },(err)=>{

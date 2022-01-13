@@ -17,7 +17,7 @@ export class BirthdayService {
   cake_type;
 
   emailname;
-
+  user;
   constructor( private http:HttpClient, private HttpErrorMsg: HttpErrorMsgService ) { }
   addGender(gen)
   {

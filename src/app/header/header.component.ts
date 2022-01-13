@@ -10,7 +10,13 @@ export class HeaderComponent implements OnInit {
 
   constructor(private service : BirthdayService) { }
   public email=this.service.emailname;
+  user
   ngOnInit(): void {
+    this.user = (JSON.parse(localStorage.getItem('user')))[0];
   }
-
+   
+  logout(){
+    localStorage.clear();
+    sessionStorage.clear();
+  }
 }

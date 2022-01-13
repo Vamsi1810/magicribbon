@@ -13,19 +13,18 @@ export class HomeComponent implements OnInit {
   constructor(private service : BirthdayService, private toastr: ToastrService) { }
   
   ngOnInit(): void {
+    
   }
 
-  UserDetails = JSON.parse(sessionStorage.getItem("user"))
+  UserDetails = this.service.user;
   type;venue;attendees;contact;food;decorations;date;others;
-
-  name;
-  email="krishna18vamsi@gmail.com";
+  
   orderdetails;
   submit(){
     console.log(this.UserDetails);
     const order:Order={
-      name : this.name,
-      email : this.email,
+      name : this.UserDetails.name,
+      email : this.UserDetails.email,
       phone: this.contact,  
       venue : this.venue,
       dates : this.date,
