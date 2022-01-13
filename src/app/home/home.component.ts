@@ -14,10 +14,15 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  UserDetails = JSON.parse(sessionStorage.getItem("user"))
   type;venue;attendees;contact;food;decorations;date;others;
-  name="vamsi";email="krishna18vamsi@gmail.com";
+
+  name;
+  email="krishna18vamsi@gmail.com";
   orderdetails;
   submit(){
+    console.log(this.UserDetails);
     const order:Order={
       name : this.name,
       email : this.email,
